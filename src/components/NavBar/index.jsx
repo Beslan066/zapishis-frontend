@@ -3,13 +3,12 @@ import "./styles.css";
 import { UserProfile } from "../UserProfile";
 
 export default function Navbar() {
-  // Для тестирования верстки измените на false (чтобы увидеть клиентское меню)
   const isBusiness = false;
 
-  const user = {
-    name: "Test",
-    email: "test@example.com",
-  };
+  // const user = {
+  //   name: "Test",
+  //   email: "test@example.com",
+  // };
 
   return (
     <nav className="main-navbar">

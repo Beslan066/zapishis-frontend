@@ -1,0 +1,231 @@
+/* Блок-контейнер всей страницы */
+.company-detail {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 16px;
+  padding-top: 2rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+/* Общий блок для карточек / секций (Глассморфизм) */
+.company-section {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 24px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 20px 25px -5px rgba(243, 244, 246, 0.5),
+    0 8px 10px -6px rgba(243, 244, 246, 0.5);
+  margin-bottom: 24px;
+}
+
+/* Секция сотрудников не имеет нижнего отступа в конце */
+.company-section--last {
+  margin-bottom: 0;
+}
+
+/* Заголовки секций */
+.company-section__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px 0;
+}
+
+/* --- СЕКЦИЯ: ИНФОРМАЦИЯ О КОМПАНИИ --- */
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .company-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.company-info__main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.company-info__logo {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.company-info__logo-letter {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.company-info__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.company-info__meta {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 2px 0 0 0;
+}
+
+/* Кнопка записи */
+.company-info__button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.company-info__button:hover {
+  box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.3);
+  transform: scale(1.02);
+}
+
+/* --- СЕКЦИЯ: ОПИСАНИЕ --- */
+.company-description__text {
+  color: #374151;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* --- СЕТКА ДЛЯ УСЛУГ И СОТРУДНИКОВ --- */
+.company-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .company-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .company-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Внутренние карточки (элементы сетки) */
+.company-card {
+  background: rgba(249, 250, 251, 0.8);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(243, 244, 246, 0.8);
+}
+
+/* --- СЕКЦИЯ: УСЛУГИ --- */
+.service-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-item__icon {
+  font-size: 24px;
+}
+
+.service-item__price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.service-item__name {
+  font-weight: 600;
+  color: #111827;
+  margin: 8px 0 0 0;
+}
+
+.service-item__duration {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 4px 0 0 0;
+}
+
+/* --- СЕКЦИЯ: СОТРУДНИКИ --- */
+.employee-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.employee-item__avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.employee-item__avatar-letter {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.employee-item__name {
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.employee-item__position {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 2px 0 0 0;
+}
+
+/* --- КНОПКА НАЗАД --- */
+.company-detail__back-wrapper {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.company-detail__back-link {
+  font-size: 14px;
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.company-detail__back-link:hover {
+  color: #4b5563;
+}

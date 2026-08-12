@@ -4,7 +4,7 @@ const AppointmentsHistory = ({ history = [] }) => {
   return (
     <div className="history-card">
       <div className="history-header">
-        <h3 className="history-title">📋 История записей</h3>
+        <h3 className="history-title">История записей</h3>
         <a href="#" className="history-view-all">
           Вся история →
         </a>

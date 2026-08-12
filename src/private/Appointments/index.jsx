@@ -13,7 +13,6 @@ export default function Appointments() {
           <div className="header-flex">
             <div>
               <h1 className="header-title">
-                <span className="header-emoji">📅</span>
                 Мои записи
               </h1>
               <p className="header-subtitle">Все ваши записи в одном месте</p>

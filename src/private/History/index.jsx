@@ -14,7 +14,6 @@ export default function AppointmentHistory() {
           <div className="header-flex">
             <div>
               <h1 className="header-title">
-                <span className="header-emoji">📋</span>
                 История записей
               </h1>
               <p className="header-subtitle">

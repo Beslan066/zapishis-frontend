@@ -24,7 +24,6 @@ export default function Companies({
           <div className="header-flex">
             <div>
               <h1 className="header-title">
-                <span className="header-emoji">🏢</span>
                 Компании
               </h1>
               <p className="header-subtitle">

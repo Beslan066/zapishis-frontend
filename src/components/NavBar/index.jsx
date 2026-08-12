@@ -76,7 +76,7 @@ export default function Navbar() {
                     `nav-item ${isActive ? "active" : ""}`
                   }
                 >
-                  🏠 Главная
+                  Главная
                 </NavLink>
                 <NavLink
                   to="/client/search"
@@ -84,7 +84,7 @@ export default function Navbar() {
                     `nav-item ${isActive ? "active" : ""}`
                   }
                 >
-                  🔍 Поиск
+                  Поиск
                 </NavLink>
                 <NavLink
                   to="/companies"
@@ -92,7 +92,7 @@ export default function Navbar() {
                     `nav-item ${isActive ? "active" : ""}`
                   }
                 >
-                  🏢 Компании
+                  Компании
                 </NavLink>
                 <NavLink
                   to="/client/appointments"
@@ -100,7 +100,7 @@ export default function Navbar() {
                     `nav-item ${isActive ? "active" : ""}`
                   }
                 >
-                  📅 Мои записи
+                  Мои записи
                 </NavLink>
                 <NavLink
                   to="/client/history"
@@ -108,7 +108,7 @@ export default function Navbar() {
                     `nav-item ${isActive ? "active" : ""}`
                   }
                 >
-                  📋 История
+                  История
                 </NavLink>
               </div>
             )}

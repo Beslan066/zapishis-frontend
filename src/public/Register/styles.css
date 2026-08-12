@@ -1,0 +1,189 @@
+/* ==========================================
+   ШОГ 0: ВЫБОР РОЛИ (УНИКАЛЬНЫЕ СТИЛИ)
+   ========================================== */
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.role-button {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: rgba(249, 250, 251, 0.8);
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.role-button:hover {
+  border-color: #a5b4fc;
+  background-color: rgba(239, 246, 255, 0.5);
+}
+
+.role-icon {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.role-button:hover .role-icon {
+  transform: scale(1.1);
+}
+
+.role-name {
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.role-description {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   ШАГ 1 & 2: ЗАПОЛНЕНИЕ ДАННЫХ И СМС ИКОНКА
+   ========================================== */
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  color: #9ca3af;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  color: #4b5563;
+  background-color: #f3f4f6;
+}
+
+.back-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.form-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.role-highlight {
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+/* Кнопка «глаз» для пароля */
+.toggle-password-btn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.toggle-password-btn:hover {
+  color: #4b5563;
+}
+
+.toggle-password-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Информационная плашка SMS в поле телефона */
+.input-badge {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.input-hint {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 0;
+}
+
+/* Условия использования */
+.terms-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.terms-checkbox {
+  margin-top: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  accent-color: #4f46e5;
+  cursor: pointer;
+}
+
+.terms-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+/* Декоративная большая иконка телефона на шаге подтверждения */
+.verify-icon-box {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(to bottom right, #e0e7ff, #f3e8ff);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.verify-icon-box svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #4f46e5;
+}
+
+.verify-text-center {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}

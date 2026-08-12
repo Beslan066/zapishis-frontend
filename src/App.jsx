@@ -15,6 +15,7 @@ import Companies from "./private/Companies";
 import Appointments from "./private/Appointments";
 import AppointmentHistory from "./private/History";
 import ProfilePage from "./private/Profile";
+import CompanyDetail from "./private/CompanyDetail";
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/client/dashboard" element={<ClientDashboard />} />
           <Route path="/client/search" element={<Search />} />
           <Route path="/companies" element={<Companies />} />
+          <Route path="/companies/:id" element={<CompanyDetail />} />
           <Route path="/client/appointments" element={<Appointments />} />
           <Route path="/client/history" element={<AppointmentHistory />} />
           <Route path="/profile" element={<ProfilePage />} />

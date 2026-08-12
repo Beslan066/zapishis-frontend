@@ -1,5 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import "./styles.css";
+import { UserProfile } from "../UserProfile";
 
 export default function Navbar() {
   // Для тестирования верстки измените на false (чтобы увидеть клиентское меню)
@@ -130,55 +131,7 @@ export default function Navbar() {
             </button>
 
             {/* Профиль с выпадающим списком */}
-            <div className="nav-profile-wrapper">
-              <button className="nav-profile-trigger">
-                <div className="nav-avatar">
-                  {user.name.substring(0, 1).toUpperCase()}
-                </div>
-                <span className="nav-username">{user.name}</span>
-                <svg
-                  className="nav-arrow"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              <div className="nav-dropdown">
-                <div className="nav-dropdown-info">
-                  <p className="nav-dropdown-name">{user.name}</p>
-                  <p className="nav-dropdown-email">{user.email}</p>
-                  <div className="nav-dropdown-badge-row">
-                    {isBusiness ? (
-                      <span className="nav-badge-business">Бизнес</span>
-                    ) : (
-                      <span className="nav-badge-client">Клиент</span>
-                    )}
-                  </div>
-                </div>
-
-                {isBusiness && (
-                  <Link to="/businesses/create" className="nav-dropdown-link">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    Создать компанию
-                  </Link>
-                )}
-              </div>
-            </div>
+            <UserProfile />
           </div>
         </div>
       </div>

@@ -14,6 +14,7 @@ import Search from "./private/Search";
 import Companies from "./private/Companies";
 import Appointments from "./private/Appointments";
 import AppointmentHistory from "./private/History";
+import ProfilePage from "./private/Profile";
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/companies" element={<Companies />} />
           <Route path="/client/appointments" element={<Appointments />} />
           <Route path="/client/history" element={<AppointmentHistory />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
         {/* 404 Страница */}
         <Route path="*" element={<h1>Страница не найдена</h1>} />

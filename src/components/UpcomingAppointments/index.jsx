@@ -4,7 +4,7 @@ export const UpcomingAppointments = ({ appointments = [] }) => {
   return (
     <div className="appointments-card">
       <div className="appointments-header">
-        <h3 className="appointments-title">📅 Предстоящие записи</h3>
+        <h3 className="appointments-title">Предстоящие записи</h3>
         <a href="#" className="appointments-view-all">
           Все записи →
         </a>

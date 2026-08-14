@@ -1,25 +1,26 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PublicLayout from "./Layouts/PublicLayout";
-// import AppLayout from "./Layouts/AppLayout";
-
-// Страницы
+import AuthLayout from "./Layouts/AuthLayout";
+import PrivateLayout from "./Layouts/PrivateLayout";
 import Home from "./public/Home";
 import Register from "./public/Register";
 import Login from "./public/Login";
-import AuthLayout from "./Layouts/AuthLayout";
-import PrivateLayout from "./Layouts/PrivateLayout";
 import ClientDashboard from "./private/Client/Dashboard";
 import Search from "./private/Client/Search";
 import Companies from "./private/Client/Companies";
+import CompanyDetail from "./private/Client/CompanyDetail";
 import AppointmentsClient from "./private/Client/Appointments";
 import AppointmentHistory from "./private/Client/History";
 import ProfilePage from "./private/Client/Profile";
-import CompanyDetail from "./private/Client/CompanyDetail";
-import Dashboard from "./private/Dashboard";
-import Appointments from "./private/Appointments";
-import Services from "./private/Services";
-import EmployeesPage from "./private/Employees";
-import Clients from "./private/Clients";
+import BusinessDashboard from "./private/Business/Dashboard";
+import Appointments from "./private/Business/Appointments";
+import Services from "./private/Business/Services";
+import EmployeesPage from "./private/Business/Employees";
+import EmployeesCreate from "./private/Business/EmployeesCreate";
+import Clients from "./private/Business/Clients";
+// import AppLayout from "./Layouts/AppLayout";
+
+// Страницы
 
 export default function App() {
   return (
@@ -49,10 +50,11 @@ export default function App() {
           <Route path="/client/appointments" element={<AppointmentsClient />} />
           <Route path="/client/history" element={<AppointmentHistory />} />
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<BusinessDashboard />} />
           <Route path="/appointments" element={<Appointments />} />
           <Route path="/services" element={<Services />} />
           <Route path="/employees" element={<EmployeesPage />} />
+          <Route path="/employees/create" element={<EmployeesCreate />} />
           <Route path="/clients" element={<Clients />} />
         </Route>
         {/* 404 Страница */}

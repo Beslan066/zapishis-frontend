@@ -130,7 +130,7 @@ export default function Navbar() {
             </button>
 
             {/* Профиль с выпадающим списком */}
-            <UserProfile />
+            <UserProfile isBusiness={isBusiness} />
           </div>
         </div>
       </div>

@@ -13,9 +13,7 @@ export default function AppointmentHistory() {
         <div className="history-card header-card">
           <div className="header-flex">
             <div>
-              <h1 className="header-title">
-                История записей
-              </h1>
+              <h1 className="header-title">История записей</h1>
               <p className="header-subtitle">
                 Все ваши завершенные и отмененные записи
               </p>

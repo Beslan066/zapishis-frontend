@@ -1,5 +1,5 @@
 import "./styles.css";
-export const UserProfile = () => {
+export const UserProfile = ({ isBusiness }) => {
   return (
     <div className="user-profile">
       {/* Кнопка открытия (триггер ховера) */}
@@ -29,9 +29,15 @@ export const UserProfile = () => {
             <p className="user-profile__name">Иван Иванов</p>
             <p className="user-profile__email">user@example.com</p>
             <p className="user-profile__role-wrapper">
-              <span className="user-profile__role-badge user-profile__role-badge--client">
-                Клиент
-              </span>
+              {isBusiness ? (
+                <span className="user-profile__role-badge user-profile__role-badge--business">
+                  Бизнес
+                </span>
+              ) : (
+                <span className="user-profile__role-badge user-profile__role-badge--client">
+                  Клиент
+                </span>
+              )}
             </p>
           </div>
 

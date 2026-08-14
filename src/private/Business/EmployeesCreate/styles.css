@@ -1,0 +1,166 @@
+.employee-form-container {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+/* Карточка */
+.employee-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 20px 25px -5px rgba(243, 244, 246, 0.5),
+    0 10px 10px -5px rgba(243, 244, 246, 0.5);
+}
+
+/* Шапка карточки */
+.employee-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.employee-card__icon-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(to bottom right, #e0e7ff, #f3e8ff);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-card__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #4f46e5;
+}
+
+.employee-card__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+
+/* Форма и макет полей */
+.employee-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.employee-form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .employee-form__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.employee-form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-form__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.375rem;
+}
+
+.employee-form__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem 1rem;
+  background-color: rgba(249, 250, 251, 0.8);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  border-radius: 1rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.employee-form__input:focus {
+  background-color: #fff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Элементы чекбокса */
+.employee-form__checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.employee-form__checkbox {
+  width: 1rem;
+  height: 1rem;
+  color: #4f46e5;
+  border-radius: 0.25rem;
+  border-color: #d1d5db;
+}
+
+.employee-form__checkbox-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Действия формы */
+.employee-form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(243, 244, 246, 0.8);
+}
+
+.employee-form__btn {
+  padding: 0.625rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.employee-form__btn--cancel {
+  color: #4b5563;
+  background-color: transparent;
+}
+
+.employee-form__btn--cancel:hover {
+  background-color: rgba(243, 244, 246, 0.8);
+}
+
+.employee-form__btn--submit {
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.25);
+}
+
+.employee-form__btn--submit:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.3);
+}

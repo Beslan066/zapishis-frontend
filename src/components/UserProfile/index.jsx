@@ -1,5 +1,5 @@
 import "./styles.css";
-export const UserProfile = ({ user }) => {
+export const UserProfile = () => {
   return (
     <div className="user-profile">
       {/* Кнопка открытия (триггер ховера) */}

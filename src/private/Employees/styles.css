@@ -1,0 +1,359 @@
+.employees-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.employees-page__wrapper {
+  padding-top: 3rem;
+}
+
+.employees-page__top-panel {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 20px 25px -5px rgba(243, 244, 246, 0.5),
+    0 8px 10px -6px rgba(243, 244, 246, 0.5);
+}
+
+.employees-page__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .employees-page__layout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.employees-page__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.employees-page__title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+
+.employees-page__title-emoji {
+  font-size: 1.875rem;
+}
+
+.employees-page__subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.employees-page__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Модификатор для кнопки создания */
+.employees-page__btn--create {
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+  color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.25);
+}
+
+.employees-page__btn--create:hover {
+  box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.3);
+  transform: scale(1.02);
+}
+
+.employees-page__btn-icon {
+  width: 1rem;
+  height: 1rem;
+}
+.employees-list {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 20px 25px -5px rgba(243, 244, 246, 0.5),
+    0 8px 10px -6px rgba(243, 244, 246, 0.5);
+}
+
+.employees-list__grid {
+  display: grid;
+  grid-template-cols: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .employees-list__grid {
+    grid-template-cols: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .employees-list__grid {
+    grid-template-cols: repeat(3, 1fr);
+  }
+}
+
+/* Карточка сотрудника */
+.employees-list__card {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(243, 244, 246, 0.8);
+  transition: all 0.2s ease-in-out;
+}
+
+.employees-list__card:hover {
+  box-shadow: 0 10px 15px -3px rgba(224, 231, 255, 0.3);
+  transform: scale(1.02);
+}
+
+.employees-list__card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Аватар */
+.employees-list__avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(to bottom right, #e0e7ff, #f3e8ff);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.employees-list__avatar-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+/* Информация мета */
+.employees-list__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.employees-list__profile {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.employees-list__name {
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.employees-list__position {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.125rem;
+  margin-bottom: 0;
+}
+
+/* Статусы */
+.employees-list__status {
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.employees-list__status--active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.employees-list__status--inactive {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Контакты */
+.employees-list__contacts {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.employees-list__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.employees-list__contact-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* Бейджи */
+.employees-list__badges {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.employees-list__badge {
+  font-size: 0.75rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.employees-list__badge--indigo {
+  background-color: #eef2ff;
+  color: #4338ca;
+}
+
+.employees-list__badge--gray {
+  background-color: #f9fafb;
+  color: #4b5563;
+}
+
+/* Панель действий */
+.employees-list__actions {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(243, 244, 246, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.employees-list__action-btn {
+  display: inline-flex;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  color: #9ca3af;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.employees-list__action-btn:hover {
+  color: #4f46e5;
+  background-color: #f5f3ff;
+}
+
+.employees-list__action-btn--delete:hover {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.employees-list__action-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Пагинация */
+.employees-list__pagination {
+  margin-top: 1.5rem;
+}
+
+/* Пустое состояние списка сотрудников */
+.employees-list__empty {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.employees-list__empty-icon-box {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(to bottom right, #e0e7ff, #f3e8ff);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.employees-list__empty-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #4f46e5;
+}
+
+.employees-list__empty-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.employees-list__empty-description {
+  color: #6b7280;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.employees-list__empty-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+  color: #ffffff;
+  border-radius: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.employees-list__empty-btn:hover {
+  box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.3);
+  transform: scale(1.02);
+}
+
+.employees-list__empty-btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}

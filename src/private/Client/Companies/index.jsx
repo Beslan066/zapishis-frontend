@@ -23,7 +23,9 @@ export default function Companies({
         <div className="companies-card header-card">
           <div className="header-flex">
             <div>
-              <h1 className="header-title">Компании</h1>
+              <h1 className="header-title">
+                <span class="text-3xl">🏢</span>Компании
+              </h1>
               <p className="header-subtitle">
                 Найдите и запишитесь в лучшие компании на Кавказе
               </p>

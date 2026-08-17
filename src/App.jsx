@@ -19,6 +19,7 @@ import EmployeesPage from "./private/Business/Employees";
 import EmployeesCreate from "./private/Business/EmployeesCreate";
 import Clients from "./private/Business/Clients";
 import Policy from "./public/Policy";
+import Offer from "./public/Offer";
 // import AppLayout from "./Layouts/AppLayout";
 
 // Страницы
@@ -31,6 +32,7 @@ export default function App() {
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/policy" element={<Policy />} />
+          <Route path="/offer" element={<Offer />} />
         </Route>
 
         {/* Приватная часть (защищена ProtectedRoute) */}

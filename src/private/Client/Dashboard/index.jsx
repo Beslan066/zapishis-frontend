@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./styles.css";
 import UpcomingAppointments from "../../../components/UpcomingAppointments";
 import AppointmentsHistory from "../../../components/AppointmentsHistory";
+import { Button } from "../../../components/Button";
 const mockAppointments = [
   {
     id: 1,
@@ -84,10 +85,9 @@ export default function ClientDashboard() {
                 Вот ваши последние записи и активность
               </p>
             </div>
-
-            <Link to="/companies" className="welcome-action-btn">
-              Найти компанию
-            </Link>
+            <Button variant="primary" asChild>
+              <Link to="/companies">Найти компанию</Link>
+            </Button>
           </div>
         </div>
         {/* Статистика */}

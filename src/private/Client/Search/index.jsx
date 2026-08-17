@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { Button } from "../../../components/Button";
+import { FormSelect } from "../../../components/FormSelect";
+import { Pagination } from "../../../components/Pagination";
 import "./styles.css";
 const mockCategories = ["Красота", "Здоровье", "Спорт", "Авто", "Обучение"];
 const mockRegions = [
@@ -40,6 +44,8 @@ const mockServices = [
   },
 ];
 export default function Search() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 3;
   return (
     <>
       <div className="bg-blur-container">
@@ -72,35 +78,20 @@ export default function Search() {
                 placeholder="Название услуги или компании"
               />
             </div>
-
-            <div>
-              <label className="input-label">Категория</label>
-              <select name="category" className="form-select">
-                <option value="">Все категории</option>
-                {mockCategories.map((cat, idx) => (
-                  <option key={idx} value={cat}>
-                    {cat}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="input-label">Регион</label>
-              <select name="region" className="form-select">
-                <option value="">Все регионы</option>
-                {mockRegions.map((reg, idx) => (
-                  <option key={idx} value={reg}>
-                    {reg}
-                  </option>
-                ))}
-              </select>
-            </div>
-
+            <FormSelect
+              label="Категория"
+              options={mockCategories}
+              name={"category"}
+            />
+            <FormSelect label="Регион" options={mockRegions} name={"region"} />
             <div className="btn-align-end">
-              <button type="submit" className="search-submit-btn">
+              <Button
+                type="submit"
+                variant="primary"
+                className="search-submit-btn"
+              >
                 Найти
-              </button>
+              </Button>
             </div>
           </form>
         </div>
@@ -145,16 +136,11 @@ export default function Search() {
                 ))}
               </div>
 
-              {/* Имитация пагинации */}
-              <div className="pagination-wrapper">
-                <div className="pagination-mock">
-                  <button className="page-btn disabled">←</button>
-                  <button className="page-btn active">1</button>
-                  <button className="page-btn">2</button>
-                  <button className="page-btn">3</button>
-                  <button className="page-btn">→</button>
-                </div>
-              </div>
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={(page) => setCurrentPage(page)}
+              />
             </>
           ) : (
             <div className="search-empty-state">

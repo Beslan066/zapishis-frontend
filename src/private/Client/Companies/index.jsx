@@ -1,9 +1,45 @@
+import { Button } from "../../../components/Button";
+import { FormSelect } from "../../../components/FormSelect";
 import "./styles.css";
-export default function Companies({
-  businesses = [],
-  regions = [],
-  currentFilters = {},
-}) {
+const regions = [
+  "Кабардино-Балкария",
+  "Карачаево-Черкесия",
+  "Северная Осетия",
+  "Чечня",
+  "Дагестан",
+  "Ингушетия",
+  "Адыгея",
+];
+const businesses = [
+  {
+    id: 1,
+    name: "Компания 1",
+    city: "Город 1",
+    region: "Кабардино-Балкария",
+    clients_count: 120,
+    appointments_count: 45,
+    slug: "company-1",
+  },
+  {
+    id: 2,
+    name: "Компания 2",
+    city: "Город 2",
+    region: "Карачаево-Черкесия",
+    clients_count: 80,
+    appointments_count: 30,
+    slug: "company-2",
+  },
+  {
+    id: 3,
+    name: "Компания 3",
+    city: "Город 3",
+    region: "Северная Осетия",
+    clients_count: 150,
+    appointments_count: 60,
+    slug: "company-3",
+  },
+];
+export default function Companies() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -41,14 +77,14 @@ export default function Companies({
               <input
                 type="text"
                 name="search"
-                defaultValue={currentFilters.search || ""}
+                defaultValue={""}
                 className="form-input"
                 placeholder="Название или город"
               />
             </div>
 
             <div className="form-group">
-              <label className="form-label">Регион</label>
+              {/* <label className="form-label">Регион</label>
               <div className="select-wrapper">
                 <select
                   name="region"
@@ -62,13 +98,12 @@ export default function Companies({
                     </option>
                   ))}
                 </select>
-              </div>
+              </div> */}
+              <FormSelect label={"Регион"} options={regions} />
             </div>
 
             <div className="form-group button-group">
-              <button type="submit" className="submit-button">
-                Найти
-              </button>
+              <Button className={"Companies__submit-button"}>Найти</Button>
             </div>
           </form>
         </div>

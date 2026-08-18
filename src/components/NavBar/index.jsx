@@ -3,7 +3,7 @@ import "./styles.css";
 import { UserProfile } from "../UserProfile";
 
 export default function Navbar() {
-  const isBusiness = true;
+  const isBusiness = false;
 
   // const user = {
   //   name: "Test",

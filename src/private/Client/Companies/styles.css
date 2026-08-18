@@ -116,22 +116,9 @@
   position: relative;
 }
 
-.submit-button {
+.Companies__submit-button {
   width: 100%;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(to right, var(--indigo-600), var(--purple-600));
-  color: #ffffff;
-  border: none;
-  border-radius: 1rem;
-  font-weight: 500;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.25);
-  transition: all 0.2s ease;
-}
-.submit-button:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.3);
 }
 
 .companies-grid {
